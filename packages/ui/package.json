@@ -1,0 +1,44 @@
+{
+	"name": "@the-stack/ui",
+	"private": true,
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		"./components/*": "./src/components/*.tsx",
+		"./icons": "./src/icons/index.ts"
+	},
+	"scripts": {
+		"lint": "biome lint",
+		"lint:fix": "biome lint --fix",
+		"format": "biome format",
+		"format:fix": "biome format --fix",
+		"type-check": "tsc --noEmit",
+		"storybook": "storybook dev -p 6006"
+	},
+	"peerDependencies": {
+		"@the-stack/tailwind-theme": "workspace:*",
+		"clsx": "^2.1.1",
+		"motion": "^12.5.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"tailwindcss": "^4.0.15"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@storybook/addon-essentials": "^8.6.9",
+		"@storybook/react": "^8.6.9",
+		"@storybook/react-vite": "^8.6.9",
+		"@tailwindcss/vite": "^4.0.15",
+		"@the-stack/biome-config": "workspace:*",
+		"@types/react": "^19.0.12",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react": "^4.3.4",
+		"globals": "^16.0.0",
+		"storybook": "^8.6.9",
+		"typescript": "^5.8.2",
+		"vite": "^6.2.3"
+	},
+	"dependencies": {
+		"react-select": "^5.10.1"
+	}
+}

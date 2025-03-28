@@ -1,0 +1,29 @@
+{
+	// Search
+	"search.exclude": {
+		"**/.next": true
+	},
+
+	// BiomeJs Settings
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+
+	// Tailwindcss Settings
+	"editor.quickSuggestions": {
+		"other": "on",
+		"comments": "off",
+		"strings": "on"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"tailwindCSS.classFunctions": ["clsx"],
+
+	// TypeScript Settings
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.preferences.includePackageJsonAutoImports": "on"
+}

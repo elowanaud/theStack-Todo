@@ -1,0 +1,9 @@
+{
+	"errors": {
+		"somethingWentWrong": "Something went wrong",
+		"invalidCredentials": "Invalid credentials",
+		"unAuthorizedPage": "You are not authorized to access this page",
+		"unAuthorizedAction": "You are not authorized to perform this action",
+		"invalidToken": "Invalid token"
+	}
+}

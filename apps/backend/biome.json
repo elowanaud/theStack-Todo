@@ -1,0 +1,14 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"extends": ["@the-stack/biome-config/base"],
+	"linter": {
+		"rules": {
+			"style": {
+				"useImportType": "off"
+			},
+			"correctness": {
+				"noUndeclaredVariables": "off"
+			}
+		}
+	}
+}

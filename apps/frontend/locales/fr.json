@@ -1,0 +1,9 @@
+{
+	"errors": {
+		"somethingWentWrong": "Une erreur inattendue s'est produite",
+		"invalidCredentials": "Identifiants invalides",
+		"unAuthorizedPage": "Vous n'êtes pas autorisé à accéder à cette page",
+		"unAuthorizedAction": "Vous n'êtes pas autorisé à effectuer cette action",
+		"invalidToken": "Jeton invalide"
+	}
+}
