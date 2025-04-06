@@ -7,3 +7,5 @@ export { ChevronDownIcon } from "./Chevrons.tsx";
 export { XIcon } from "./X.tsx";
 export { SearchIcon } from "./Search.tsx";
 export { NoDataIcon } from "./NoData.tsx";
+export { TrashIcon } from "./Trash.tsx";
+export { PlusIcon } from "./Plus.tsx";

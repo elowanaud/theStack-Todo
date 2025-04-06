@@ -7,6 +7,7 @@ export function ReactScanProvider() {
 	useEffect(() => {
 		scan({
 			enabled: true,
+			trackUnnecessaryRenders: true,
 		});
 	}, []);
 

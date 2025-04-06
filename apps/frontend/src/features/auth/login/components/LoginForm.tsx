@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/components/ui/Link/Link";
+import { Link } from "@/components/ui/Link";
 import { useLogin } from "@/features/auth/login/hooks/useLogin";
 import { useLoginForm } from "@/features/auth/login/hooks/useLoginForm";
 import { Button } from "@the-stack/ui/components/Button";

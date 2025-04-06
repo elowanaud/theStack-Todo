@@ -4,6 +4,7 @@ import hash from "@adonisjs/core/services/hash";
 import { BaseModel, column, hasMany } from "@adonisjs/lucid/orm";
 import type { HasMany } from "@adonisjs/lucid/types/relations";
 import type { DateTime } from "luxon";
+import Todo from "#models/todo";
 import Token from "#models/token";
 
 const AuthFinder = withAuthFinder(() => hash.use("scrypt"), {
@@ -34,4 +35,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
 		onQuery: (db) => db.where("type", "RESET_PASSWORD"),
 	})
 	declare resetPasswordTokens: HasMany<typeof Token>;
+
+	@hasMany(() => Todo)
+	declare todos: HasMany<typeof Todo>;
 }

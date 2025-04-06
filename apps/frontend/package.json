@@ -38,6 +38,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@tanstack/react-query-devtools": "^5.71.3",
 		"@the-stack/biome-config": "workspace:*",
 		"@types/node": "^22.13.13",
 		"@types/react": "^19.0.12",

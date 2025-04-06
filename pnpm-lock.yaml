@@ -20,6 +20,9 @@ importers:
       '@adonisjs/auth':
         specifier: ^9.3.1
         version: 9.3.2(cee12fae4a390991b5051bf36c43c5af)
+      '@adonisjs/bouncer':
+        specifier: ^3.1.5
+        version: 3.1.5(@adonisjs/core@6.17.2(@adonisjs/assembler@7.8.2(babel-plugin-macros@3.1.0)(typescript@5.8.2))(@vinejs/vine@3.0.1)(edge.js@6.2.1))(edge.js@6.2.1)
       '@adonisjs/core':
         specifier: ^6.17.2
         version: 6.17.2(@adonisjs/assembler@7.8.2(babel-plugin-macros@3.1.0)(typescript@5.8.2))(@vinejs/vine@3.0.1)(edge.js@6.2.1)
@@ -187,6 +190,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.9.4
         version: 1.9.4
+      '@tanstack/react-query-devtools':
+        specifier: ^5.71.3
+        version: 5.71.3(@tanstack/react-query@5.69.0(react@19.0.0))(react@19.0.0)
       '@the-stack/biome-config':
         specifier: workspace:*
         version: link:../../packages/biome-config
@@ -324,6 +330,21 @@ packages:
     engines: {node: '>=18.16.0'}
     peerDependencies:
       '@adonisjs/http-server': ^7.4.0
+
+  '@adonisjs/bouncer@3.1.5':
+    resolution: {integrity: sha512-zgyuHUZeggPjCbcdjbLZl7qfykioLzFnxzAuZrLrvwrMeZhJ7aaYydJQtnGVZjMAAhymjP6JOa32fEd2bqdZZg==}
+    engines: {node: '>=18.16.0'}
+    peerDependencies:
+      '@adonisjs/core': ^6.17.1
+      '@adonisjs/i18n': ^2.2.0
+      edge.js: ^6.2.1
+    peerDependenciesMeta:
+      '@adonisjs/core':
+        optional: true
+      '@adonisjs/i18n':
+        optional: true
+      edge.js:
+        optional: true
 
   '@adonisjs/config@5.0.2':
     resolution: {integrity: sha512-NXjFqDHNGRTZ1EnA4zr20GFEt7qw/JvZ4ZV8/PzFyVc7dPoFprpoyE3bw7kmlKHhcQdBbF7YXCGB4q+HQUnqiQ==}
@@ -2230,6 +2251,15 @@ packages:
 
   '@tanstack/query-core@5.69.0':
     resolution: {integrity: sha512-Kn410jq6vs1P8Nm+ZsRj9H+U3C0kjuEkYLxbiCyn3MDEiYor1j2DGVULqAz62SLZtUZ/e9Xt6xMXiJ3NJ65WyQ==}
+
+  '@tanstack/query-devtools@5.71.3':
+    resolution: {integrity: sha512-+m706O9Rly+34z0JNkRiGMVKEF5vMvViGoj7DNkYMZ7AiGq6EHDfg7zdjPv3srixHYjkdHlcsO72oyh+GtyrlQ==}
+
+  '@tanstack/react-query-devtools@5.71.3':
+    resolution: {integrity: sha512-vA0h92TXbfKpk8p2mRbGt/bffJF7Fp8cJGArubge0Uyyh1FPzjgkFsWnkBz0IUThb9P8JU7eOftDwluv//zpAg==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.71.3
+      react: ^18 || ^19
 
   '@tanstack/react-query@5.69.0':
     resolution: {integrity: sha512-Ift3IUNQqTcaFa1AiIQ7WCb/PPy8aexZdq9pZWLXhfLcLxH0+PZqJ2xFImxCpdDZrFRZhLJrh76geevS5xjRhA==}
@@ -5024,6 +5054,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@adonisjs/bouncer@3.1.5(@adonisjs/core@6.17.2(@adonisjs/assembler@7.8.2(babel-plugin-macros@3.1.0)(typescript@5.8.2))(@vinejs/vine@3.0.1)(edge.js@6.2.1))(edge.js@6.2.1)':
+    dependencies:
+      '@poppinss/utils': 6.9.2
+    optionalDependencies:
+      '@adonisjs/core': 6.17.2(@adonisjs/assembler@7.8.2(babel-plugin-macros@3.1.0)(typescript@5.8.2))(@vinejs/vine@3.0.1)(edge.js@6.2.1)
+      edge.js: 6.2.1
+
   '@adonisjs/config@5.0.2':
     dependencies:
       '@poppinss/utils': 6.9.2
@@ -6817,6 +6854,14 @@ snapshots:
       vite: 6.2.3(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.3)
 
   '@tanstack/query-core@5.69.0': {}
+
+  '@tanstack/query-devtools@5.71.3': {}
+
+  '@tanstack/react-query-devtools@5.71.3(@tanstack/react-query@5.69.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@tanstack/query-devtools': 5.71.3
+      '@tanstack/react-query': 5.69.0(react@19.0.0)
+      react: 19.0.0
 
   '@tanstack/react-query@5.69.0(react@19.0.0)':
     dependencies:

@@ -1,0 +1,16 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/todos/2
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  title: 
+  completed: 
+}

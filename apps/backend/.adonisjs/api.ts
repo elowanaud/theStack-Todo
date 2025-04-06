@@ -31,6 +31,22 @@ type AuthLogoutDelete = {
   request: unknown
   response: MakeNonSerializedTuyauResponse<import('../app/controllers/auth/logout_controller.ts').default['handle'], false>
 }
+type TodosGetHead = {
+  request: MakeTuyauRequest<InferInput<typeof import('../app/controllers/todos/list_todos_controller.ts')['validator']>>
+  response: MakeNonSerializedTuyauResponse<import('../app/controllers/todos/list_todos_controller.ts').default['handle'], true>
+}
+type TodosPost = {
+  request: MakeTuyauRequest<InferInput<typeof import('../app/controllers/todos/create_todos_controller.ts')['validator']>>
+  response: MakeNonSerializedTuyauResponse<import('../app/controllers/todos/create_todos_controller.ts').default['handle'], true>
+}
+type TodosIdPut = {
+  request: MakeTuyauRequest<InferInput<typeof import('../app/controllers/todos/update_todos_controller.ts')['validator']>>
+  response: MakeNonSerializedTuyauResponse<import('../app/controllers/todos/update_todos_controller.ts').default['handle'], true>
+}
+type TodosIdDelete = {
+  request: unknown
+  response: MakeNonSerializedTuyauResponse<import('../app/controllers/todos/delete_todos_controller.ts').default['handle'], false>
+}
 export interface ApiDefinition {
   'auth': {
     'me': {
@@ -63,6 +79,19 @@ export interface ApiDefinition {
       '$url': {
       };
       '$delete': AuthLogoutDelete;
+    };
+  };
+  'todos': {
+    '$url': {
+    };
+    '$get': TodosGetHead;
+    '$head': TodosGetHead;
+    '$post': TodosPost;
+    ':id': {
+      '$url': {
+      };
+      '$put': TodosIdPut;
+      '$delete': TodosIdDelete;
     };
   };
 }

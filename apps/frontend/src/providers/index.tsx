@@ -14,18 +14,18 @@ export async function Providers({ children }: PropsWithChildren) {
 
 	return (
 		<>
-			{process.env.NODE_ENV === "development" && <ReactScanProvider />}
-			<PageLoadingBarProvider />
-			<AuthProvider currentUser={currentUser}>
-				<I18nProvider>
-					<ReactQueryProvider>
-						<NuqsProvider>
+			<I18nProvider>
+				<ReactQueryProvider>
+					<NuqsProvider>
+						<AuthProvider currentUser={currentUser}>
+							<ReactScanProvider />
+							<PageLoadingBarProvider />
 							{children}
 							<ToasterProvider />
-						</NuqsProvider>
-					</ReactQueryProvider>
-				</I18nProvider>
-			</AuthProvider>
+						</AuthProvider>
+					</NuqsProvider>
+				</ReactQueryProvider>
+			</I18nProvider>
 		</>
 	);
 }

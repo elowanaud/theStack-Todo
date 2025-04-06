@@ -1,6 +1,6 @@
-import env from "#start/env";
 import { Secret } from "@adonisjs/core/helpers";
 import { defineConfig } from "@adonisjs/core/http";
+import env from "#start/env";
 
 /**
  * The app key is used for encrypting cookies, generating signed URLs,

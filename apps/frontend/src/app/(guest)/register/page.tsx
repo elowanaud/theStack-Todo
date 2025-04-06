@@ -1,4 +1,4 @@
-import { Link } from "@/components/ui/Link/Link";
+import { Link } from "@/components/ui/Link";
 import { RegisterForm } from "@/features/auth/register/components/RegisterForm";
 import { useTranslations } from "next-intl";
 

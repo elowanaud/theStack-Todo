@@ -16,12 +16,12 @@ export default class extends BaseSeeder {
 			);
 
 			if (email && password) {
-				await UserFactory.merge({ email, password }).create();
+				await UserFactory.merge({ email, password }).with("todos", 20).create();
 			} else {
 				throw new Error("Admin email and password must be provided.");
 			}
 
-			await UserFactory.createMany(10);
+			await UserFactory.with("todos", 20).createMany(10);
 		} finally {
 			prompt.close();
 		}

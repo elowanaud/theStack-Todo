@@ -1,16 +1,17 @@
-"use client";
+import getPrefetchTodos from "@/features/todos/actions/getPrefetchTodos";
+import TodoForm from "@/features/todos/components/TodoForm";
+import TodosList from "@/features/todos/components/TodosList";
+import { HydrationBoundary } from "@tanstack/react-query";
 
-import { LogoutButton } from "@/features/auth/logout/components/LogoutButton";
-import { useAuth } from "@/providers/Auth";
-
-export default function HomePage() {
-	const { currentUser } = useAuth((state) => state);
+export default async function HomePage() {
+	const prefetchTodos = await getPrefetchTodos();
 
 	return (
-		<div>
-			<h1>Private page</h1>
-			<LogoutButton />
-			<pre>{JSON.stringify(currentUser, null, 2)}</pre>
-		</div>
+		<main className="grid gap-4">
+			<TodoForm />
+			<HydrationBoundary state={prefetchTodos}>
+				<TodosList />
+			</HydrationBoundary>
+		</main>
 	);
 }
